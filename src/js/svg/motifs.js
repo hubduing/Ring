@@ -5,77 +5,100 @@ const A = (p) => p.accent;
 
 export const MOTIFS = {
   hob: (p) => `
-    <circle cx="60" cy="92" r="40" fill="${S(p)}" opacity="0.45"/>
-    <circle cx="60" cy="92" r="26" fill="none" stroke="${A(p)}" stroke-width="5"/>
-    <circle cx="60" cy="92" r="7" fill="${A(p)}"/>
-    <path d="M42 34 q18 -14 36 0 q-8 18 -18 18 q-10 0 -18 -18z" fill="${S(p)}" opacity="0.8"/>
-    <path d="M60 30 v10 M54 32 l6 6 m6 -6 l-6 6" stroke="${A(p)}" stroke-width="3" fill="none"/>`,
+    <ellipse cx="60" cy="108" rx="55" ry="16" fill="${S(p)}" opacity="0.4"/>
+    <circle cx="60" cy="76" r="32" fill="${S(p)}" opacity="0.55" stroke="${A(p)}" stroke-width="5"/>
+    <circle cx="60" cy="76" r="24" fill="none" stroke="${A(p)}" stroke-width="2" opacity="0.7"/>
+    <circle cx="74" cy="68" r="7" fill="${A(p)}"/>`,
 
   elf: (p) => `
-    <path d="M60 18 l10 20 22 3 -16 16 5 22 -21 -11 -21 11 5 -22 -16 -16 22 -3z" fill="${S(p)}" opacity="0.75" stroke="${A(p)}" stroke-width="4"/>
-    <path d="M60 82 q-26 8 -28 28 q28 -6 28 -28z" fill="none" stroke="${A(p)}" stroke-width="4"/>`,
+    <path d="M52 24 Q55 58 52 96" fill="none" stroke="${A(p)}" stroke-width="2" opacity="0.6"/>
+    <path d="M44 20 Q70 60 44 100" fill="none" stroke="${A(p)}" stroke-width="4"/>
+    <path d="M30 62 L88 62" stroke="${A(p)}" stroke-width="3"/>
+    <path d="M86 60 L101 52 L101 72 Z" fill="${S(p)}" opacity="0.85"/>
+    <path d="M30 62 l-7 -7 M30 62 l-7 7" stroke="${A(p)}" stroke-width="3" stroke-linecap="round"/>`,
 
   human: (p) => `
-    <path d="M60 16 L26 30 V62 C26 78 60 102 60 102 60 102 94 78 94 62 V30 Z" fill="${S(p)}" opacity="0.5" stroke="${A(p)}" stroke-width="5"/>
-    <path d="M50 42 h20 M50 66 h20 M46 44 v14 q7 4 14 0 v-14 z" stroke="${A(p)}" stroke-width="5"/>`,
+    <path d="M40 64 Q40 24 40 16 L80 16 Q80 44 78 58" fill="${S(p)}" opacity="0.45" stroke="${A(p)}" stroke-width="4"/>
+    <rect x="46" y="38" width="28" height="6" fill="${A(p)}" opacity="0.85"/>
+    <path d="M40 64 L78 58" stroke="${A(p)}" stroke-width="3"/>
+    <path d="M60 16 v-11 M58 12 l4 -6" stroke="${A(p)}" stroke-width="3" stroke-linecap="round"/>`,
 
   dwarf: (p) => `
-    <path d="M60 20 l22 14 10 28 -4 26 -28 16 -28 -16 -4 -26 10 -28z" fill="${S(p)}" opacity="0.55" stroke="${A(p)}" stroke-width="5"/>
-    <path d="M44 34 l20 20 M64 34 l-20 20 M60 30 h12 M60 30 v12" stroke="${A(p)}" stroke-width="4"/>`,
+    <path d="M60 100 L60 30" stroke="${A(p)}" stroke-width="5" stroke-linecap="round"/>
+    <path d="M58 44 Q40 18 30 44 L38 66 L56 42 Z" fill="${S(p)}" opacity="0.6" stroke="${A(p)}" stroke-width="4"/>
+    <path d="M94 88 L106 100 L94 112 L82 100 Z" fill="${A(p)}"/>
+    <path d="M88 100 L100 100 M94 94 L94 106" stroke="${S(p)}" stroke-width="2" opacity="0.8"/>`,
 
   mage: (p) => `
-    <path d="M48 12 H72 M60 12 V44" stroke="${A(p)}" stroke-width="7"/>
-    <path d="M60 44 l7 12 14 2 -10 9 2 13 -13 -7 -13 7 2 -13 -10 -9 14 -2z" fill="${S(p)}" opacity="0.8" stroke="${A(p)}" stroke-width="3"/>`,
+    <path d="M70 100 L70 44" stroke="${A(p)}" stroke-width="5" stroke-linecap="round"/>
+    <path d="M70 14 L84 32 L70 50 L56 32 Z" fill="${A(p)}"/>
+    <path d="M70 26 L76 32 L70 38 L64 32 Z" fill="${S(p)}" opacity="0.7"/>
+    <path d="M50 18 l-8 -10 M90 18 l8 -10" stroke="${A(p)}" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+    <path d="M62 72 l16 0 M62 86 l16 0" stroke="${A(p)}" stroke-width="3" opacity="0.55"/>`,
 
   dark: (p) => `
-    <ellipse cx="60" cy="60" rx="34" ry="22" fill="none" stroke="${A(p)}" stroke-width="6"/>
-    <circle cx="60" cy="60" r="13" fill="${A(p)}"/>
-    <path d="M32 22 q28 -20 56 0" fill="none" stroke="${A(p)}" stroke-width="6"/>`,
+    <path d="M60 10 L44 30 L34 96 L86 96 L76 30 Z" fill="${S(p)}" opacity="0.5" stroke="${A(p)}" stroke-width="3"/>
+    <path d="M60 10 L50 34 M60 10 L70 34" stroke="${A(p)}" stroke-width="2" opacity="0.6"/>
+    <circle cx="51" cy="38" r="4" fill="${A(p)}" opacity="0.95"/>
+    <circle cx="69" cy="38" r="4" fill="${A(p)}" opacity="0.95"/>`,
 
   orc: (p) => `
-    <path d="M34 92 q-4 -42 26 -52 30 10 26 52z" fill="${S(p)}" opacity="0.6" stroke="${A(p)}" stroke-width="5"/>
-    <path d="M38 76 h44" stroke="${A(p)}" stroke-width="5"/>
-    <path d="M44 70 l7 -10 M76 70 l-7 -10" stroke="${A(p)}" stroke-width="4"/>`,
+    <path d="M40 64 Q40 32 40 28 L80 28 Q80 36 80 60" fill="${S(p)}" opacity="0.5" stroke="${A(p)}" stroke-width="4"/>
+    <path d="M50 28 Q34 10 24 34 M70 28 Q86 10 96 34" fill="none" stroke="${A(p)}" stroke-width="4"/>
+    <path d="M38 60 L82 54 L48 42 M54 46 l10 0 M64 46 l8 -6" stroke="${A(p)}" stroke-width="4" stroke-linecap="round"/>`,
 
   ent: (p) => `
-    <path d="M60 92 V36" stroke="${A(p)}" stroke-width="7"/>
-    <circle cx="60" cy="34" r="28" fill="${S(p)}" opacity="0.5" stroke="${A(p)}" stroke-width="5"/>
-    <path d="M60 62 v-16 M50 70 v10 M70 70 v-6" stroke="${A(p)}" stroke-width="3"/>`,
+    <path d="M46 40 L46 96 L74 96 L74 40 Z" fill="${S(p)}" opacity="0.55" stroke="${A(p)}" stroke-width="4"/>
+    <path d="M46 52 L36 30 L36 24 M74 52 L84 30 L84 24" stroke="${A(p)}" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="53" cy="66" r="4" fill="${A(p)}" opacity="0.9"/>
+    <circle cx="67" cy="66" r="4" fill="${A(p)}" opacity="0.9"/>
+    <path d="M49 56 l-7 -6 M71 56 l7 -6" stroke="${A(p)}" stroke-width="3" stroke-linecap="round"/>
+    <path d="M46 96 Q38 106 60 106 Q82 106 74 96" fill="${S(p)}" opacity="0.5"/>`,
 
   tree: (p) => `
-    <path d="M34 34 L60 14 L86 34 l14 48 h-28 v-8 l8 -18h-8 l10 -14z" fill="${S(p)}" opacity="0.7" stroke="${A(p)}" stroke-width="5"/>
-    <path d="M60 14 V96 M48 56 L40 96 M72 56 l8 40 M60 26 L52 52 M60 26 l8 26" stroke="${A(p)}" stroke-width="4"/>`,
+    <path d="M46 96 L46 56 L74 56 L74 96 Z" fill="${S(p)}" opacity="0.5" stroke="${A(p)}" stroke-width="4"/>
+    <circle cx="44" cy="32" r="19" fill="${S(p)}" opacity="0.6"/>
+    <circle cx="76" cy="32" r="19" fill="${S(p)}" opacity="0.6"/>
+    <circle cx="60" cy="14" r="22" fill="${S(p)}" opacity="0.6"/>
+    <path d="M44 32 Q60 14 76 32" fill="none" stroke="${A(p)}" stroke-width="3" opacity="0.6"/>
+    <path d="M60 26 L60 40 M52 30 L48 42 M68 30 L72 42" stroke="${A(p)}" stroke-width="3"/>`,
 
   tower: (p) => `
-    <rect x="42" y="52" width="36" height="44" fill="${S(p)}" opacity="0.5" stroke="${A(p)}" stroke-width="5"/>
-    <path d="M38 52 L60 24 L82 52 Z" fill="none" stroke="${A(p)}" stroke-width="5"/>
-    <rect x="56" y="30" width="8" height="20" fill="${A(p)}"/>
-    <circle cx="60" cy="74" r="5" fill="${A(p)}"/>`,
+    <path d="M40 96 L40 36 L80 36 L80 96 Z" fill="${S(p)}" opacity="0.5" stroke="${A(p)}" stroke-width="4"/>
+    <path d="M38 36 L60 6 L82 36 Z" fill="${S(p)}" opacity="0.6" stroke="${A(p)}" stroke-width="4"/>
+    <rect x="57" y="48" width="10" height="16" fill="${A(p)}" opacity="0.85"/>
+    <path d="M34 96 L34 104 L86 104 L86 96 Z" fill="${S(p)}" opacity="0.5" stroke="${A(p)}" stroke-width="4"/>`,
 
   mountain: (p) => `
-    <path d="M14 94 L44 38 L60 64 L76 46 L106 94 Z" fill="${S(p)}" opacity="0.6" stroke="${A(p)}" stroke-width="5"/>
-    <path d="M60 64 l6 -4 V96" stroke="${A(p)}" stroke-width="4"/>`,
+    <path d="M16 96 L44 42 L62 58 L80 42 L104 96 Z" fill="${S(p)}" opacity="0.55" stroke="${A(p)}" stroke-width="4"/>
+    <path d="M62 58 l-8 -10 M74 46 l6 -8 M50 50 l8 -6" stroke="${A(p)}" stroke-width="3" stroke-linecap="round"/>`,
 
   river: (p) => `
     <circle cx="60" cy="18" r="6" fill="${A(p)}"/>
-    <path d="M20 44 q20 -10 40 0 t40 0 M20 66 q20 -10 40 0 t40 0 M20 88 q20 -10 40 0 t40 0" fill="none" stroke="${A(p)}" stroke-width="6" stroke-linecap="round"/>`,
+    <path d="M16 44 Q24 36 32 44 Q42 52 52 44 Q62 36 72 44 Q82 52 92 44 Q102 36 108 44" fill="none" stroke="${A(p)}" stroke-width="5" stroke-linecap="round"/>
+    <path d="M26 66 Q34 58 42 66 Q52 74 62 66 Q72 58 82 66 Q92 74 100 66" fill="none" stroke="${A(p)}" stroke-width="4" stroke-linecap="round" opacity="0.6"/>`,
 
   ring: (p) => `
-    <circle cx="60" cy="60" r="36" fill="none" stroke="${A(p)}" stroke-width="10"/>
-    <circle cx="60" cy="60" r="18" fill="none" stroke="${S(p)}" stroke-width="4"/>
-    <path d="M60 28 l8 16 16 4 -12 12 3 18 -15 -9 -15 9 3 -18 -12 -12 16 -4z" fill="${S(p)}" opacity="0.7" stroke="${A(p)}" stroke-width="3"/>`,
+    <circle cx="60" cy="58" r="40" fill="none" stroke="${A(p)}" stroke-width="10"/>
+    <circle cx="60" cy="58" r="30" fill="none" stroke="${S(p)}" stroke-width="2" opacity="0.7"/>
+    <path d="M34 40 l0 -8 M42 34 l0 -8 M50 29 l0 -8 M58 26 l0 -8 M66 29 l0 -8 M74 34 l0 -8 M82 40 l0 -8" stroke="${A(p)}" stroke-width="3" opacity="0.85"/>`,
 
   sword: (p) => `
-    <path d="M26 90 L90 26 L85 21 L21 85 Z" fill="${S(p)}" opacity="0.7" stroke="${A(p)}" stroke-width="4"/>
-    <path d="M70 34 l12 4 M30 86 l24 10" stroke="${A(p)}" stroke-width="6"/>
-    <circle cx="86" cy="38" r="5" fill="${A(p)}"/>`,
+    <path d="M48 34 L48 96 L72 96 L72 34 Z" fill="${S(p)}" opacity="0.5" stroke="${A(p)}" stroke-width="4"/>
+    <path d="M48 34 L60 10 L72 34 Z" fill="${S(p)}" opacity="0.5" stroke="${A(p)}" stroke-width="4"/>
+    <path d="M36 36 h48" stroke="${A(p)}" stroke-width="6"/>
+    <path d="M54 44 h12 M54 60 h12" stroke="${A(p)}" stroke-width="3"/>
+    <path d="M52 22 l-9 -5" stroke="${A(p)}" stroke-width="3" opacity="0.6"/>`,
 
   gem: (p) => `
-    <path d="M60 18 L88 46 L60 102 L32 46 Z" fill="${S(p)}" opacity="0.5" stroke="${A(p)}" stroke-width="5"/>
-    <path d="M32 46 L88 46 M60 102 V46" stroke="${A(p)}" stroke-width="4"/>`,
+    <path d="M60 16 L98 44 L60 104 L22 44 Z" fill="${S(p)}" opacity="0.5" stroke="${A(p)}" stroke-width="5"/>
+    <path d="M22 44 L98 44 M60 16 L60 60" stroke="${A(p)}" stroke-width="3" opacity="0.75"/>
+    <path d="M60 16 l-7 -9 M60 16 l7 -9" stroke="${A(p)}" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+    <circle cx="60" cy="34" r="4" fill="${A(p)}"/>`,
 
   generic: (p) => `
     <circle cx="60" cy="60" r="34" fill="none" stroke="${A(p)}" stroke-width="5"/>
-    <path d="M60 26 v68 M26 60 h68" stroke="${A(p)}" stroke-width="4" opacity="0.6"/>
+    <path d="M30 92 Q60 60 90 28" fill="none" stroke="${A(p)}" stroke-width="4" stroke-linecap="round"/>
+    <path d="M60 60 l-9 -10 M60 60 l9 -14" stroke="${A(p)}" stroke-width="3" stroke-linecap="round"/>
     <circle cx="60" cy="60" r="5" fill="${A(p)}"/>`,
 };
