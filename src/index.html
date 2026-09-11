@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Средоземье — фан-сайт о «Властелине колец»</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./css/base.css" />
+  <link rel="stylesheet" href="./css/layout.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">Средоземье</a>
+      <nav class="nav" id="siteNav">
+        <a href="index.html">Главная</a>
+        <a href="pages/characters/index.html">Персонажи</a>
+        <a href="pages/races/index.html">Расы</a>
+        <a href="pages/places/index.html">Места</a>
+        <a href="pages/artifacts/index.html">Артефакты</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" type="button" title="Переключить тему">◐</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-stage" aria-hidden="true">
+      <svg class="hero-backdrop" viewBox="0 0 1200 560" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <radialGradient id="eyeGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0" stop-color="#ffd9a0" stop-opacity=".95"/>
+            <stop offset=".25" stop-color="#ff6a2b" stop-opacity=".9"/>
+            <stop offset=".55" stop-color="#c22020" stop-opacity=".55"/>
+            <stop offset=".8" stop-color="#7a0a0a" stop-opacity=".22"/>
+            <stop offset="1" stop-color="#7a0a0a" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="eyeIris" cx="42%" cy="40%" r="60%">
+            <stop offset="0" stop-color="#ffd27a"/>
+            <stop offset=".6" stop-color="#ff5a1f"/>
+            <stop offset="1" stop-color="#a40f06"/>
+          </radialGradient>
+        </defs>
+
+        <!-- Далёкие хребты тьмы -->
+        <g class="bg-dark">
+          <path d="M0 372 L150 330 L320 356 L470 318 L600 344 L760 316 L930 352 L1080 322 L1200 356 L1200 560 L0 560 Z" fill="#060309" opacity="0.75"/>
+          <path d="M0 420 L210 388 L420 408 L600 366 L780 404 L1000 370 L1200 402 L1200 560 L0 560 Z" fill="#040208" opacity="0.85"/>
+          <path d="M0 470 L400 444 L600 452 L800 442 L1200 460 L1200 560 L0 560 Z" fill="#020106" opacity="0.95"/>
+        </g>
+
+        <!-- Барад-дур, башня Ока -->
+        <g class="bg-tower">
+          <path d="M560 470 L578 300 L592 215 L600 176 L608 215 L622 300 L640 470 Z" fill="#05030a"/>
+          <path d="M586 292 L600 190 L614 292 Z" fill="#070410"/>
+          <path d="M596 196 L600 172 L604 196 Z" fill="#0a0610"/>
+        </g>
+
+        <!-- Око Саурона -->
+        <g class="bg-eye">
+          <circle class="eye-halo" cx="600" cy="150" r="96" fill="url(#eyeGlow)">
+            <animate attributeName="r" values="88;104;88" dur="3.6s" repeatCount="indefinite"/>
+          </circle>
+          <g class="eye-rays">
+            <animateTransform attributeName="transform" type="rotate" from="0 600 150" to="360 600 150" dur="9s" repeatCount="indefinite"/>
+            <path d="M640 150 L688 150 M600 190 L600 238 M560 150 L512 150 M600 110 L600 62 M628 123 L662 89 M572 177 L538 211 M572 123 L538 89 M628 177 L662 211" stroke="#ff3a16" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+          </g>
+          <ellipse class="eye-iris" cx="600" cy="150" rx="20" ry="32" fill="url(#eyeIris)">
+            <animate attributeName="ry" values="32;28;32" dur="2.1s" repeatCount="indefinite"/>
+          </ellipse>
+          <ellipse cx="600" cy="150" rx="4.5" ry="26" fill="#0a0201"/>
+          <path class="eye-hi" d="M596 142 L600 132 L604 142 Z" fill="#ffc58a" opacity="0.9">
+            <animate attributeName="opacity" values=".9;.45;.9" dur="1.4s" repeatCount="indefinite"/>
+          </path>
+        </g>
+
+        <!-- Жар и угли в основании -->
+        <g class="bg-heat">
+          <ellipse class="ember" cx="600" cy="462" rx="64" ry="16" fill="#b04518" opacity="0.5"/>
+          <ellipse class="ember" cx="430" cy="478" rx="40" ry="10" fill="#c5501a" opacity="0.45"/>
+          <ellipse class="ember" cx="770" cy="478" rx="46" ry="11" fill="#a83a14" opacity="0.4"/>
+          <ellipse class="ember" cx="300" cy="470" rx="30" ry="8" fill="#7a1c0a" opacity="0.5"/>
+          <ellipse class="ember" cx="905" cy="470" rx="34" ry="9" fill="#8a1e0b" opacity="0.5"/>
+        </g>
+
+        <!-- Звёзды над тьмой -->
+        <g class="stars">
+          <circle cx="120" cy="70" r="2.2" fill="#e8e3d8" class="star" style="--d:0s"/>
+          <circle cx="240" cy="120" r="1.5" fill="#e8e3d8" class="star" style="--d:.6s"/>
+          <circle cx="780" cy="60" r="2.4" fill="#e8e3d8" class="star" style="--d:1.1s"/>
+          <circle cx="1050" cy="130" r="1.7" fill="#e8e3d8" class="star" style="--d:.3s"/>
+          <circle cx="90" cy="210" r="1.4" fill="#e8e3d8" class="star" style="--d:.9s"/>
+          <circle cx="1100" cy="70" r="1.9" fill="#e8e3d8" class="star" style="--d:1.4s"/>
+          <circle cx="300" cy="42" r="1.5" fill="#e8e3d8" class="star" style="--d:1.7s"/>
+          <circle cx="880" cy="52" r="2" fill="#e8e3d8" class="star" style="--d:.5s"/>
+        </g>
+      </svg>
+
+      <canvas id="ring3d" role="presentation" aria-label="Вращающееся трёхмерное Кольцо Всевластья"></canvas>
+    </div>
+
+    <div class="hero-caption">
+      <h1 class="glow-title">Средоземье</h1>
+      <p class="hero-sub">Энциклопедия по «Властелину колец»</p>
+      <q class="hero-quote">«Не все, кто блуждает, потеряны»</q>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <h2 class="section-title">Разделы энциклопедии</h2>
+
+    <div class="tiles grid">
+      <a class="tile" href="pages/characters/index.html">
+        <h2>Персонажи</h2>
+        <p>Герои и злодеи Войны Кольца.</p>
+      </a>
+      <a class="tile" href="pages/races/index.html">
+        <h2>Расы</h2>
+        <p>Эльфы, гномы, хоббиты, орки и энты.</p>
+      </a>
+      <a class="tile" href="pages/places/index.html">
+        <h2>Места</h2>
+        <p>От зелёного Шира до тёмного Мордора.</p>
+      </a>
+      <a class="tile" href="pages/artifacts/index.html">
+        <h2>Артефакты</h2>
+        <p>Кольца, мечи и камни видения.</p>
+      </a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Фан-сайт по «Властелину колец» · некоммерческий проект</p>
+    <p class="foot-quote">«Не все, кто блуждает, потеряны»</p>
+  </footer>
+
+  <script type="module" src="./js/pages/home.js"></script>
+</body>
+</html>

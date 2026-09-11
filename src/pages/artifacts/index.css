@@ -1,0 +1,9 @@
+/* Страница «Артефакты»: пурпурный акцент */
+.page-hero { border-left: 4px solid var(--purple); padding-left: 14px; }
+:root { --purple: #7a4e8f; }
+
+.card-sub::before { content: "· "; color: var(--purple); }
+
+@media (max-width: 640px) {
+  .page-hero { border-left: none; padding-left: 0; }
+}

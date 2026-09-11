@@ -1,0 +1,9 @@
+/* Страница «Места»: голубой акцент */
+.page-hero { border-left: 4px solid var(--teal); padding-left: 14px; }
+:root { --teal: #4e7f8f; }
+
+.card-sub::before { content: "· "; color: var(--teal); }
+
+@media (max-width: 640px) {
+  .page-hero { border-left: none; padding-left: 0; }
+}

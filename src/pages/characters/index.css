@@ -1,0 +1,8 @@
+/* Страница «Персонажи»: золотой акцент */
+.page-hero { border-left: 4px solid var(--gold); padding-left: 14px; }
+
+.card-sub::before { content: "· "; color: var(--gold); }
+
+@media (max-width: 640px) {
+  .page-hero { border-left: none; padding-left: 0; }
+}

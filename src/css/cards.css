@@ -1,0 +1,86 @@
+/* ===================== Карточки-компоненты ===================== */
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.card:hover { transform: translateY(-3px); box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55); }
+
+.card-rule {
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-soft), var(--accent));
+}
+
+.card h3 { margin: 0; font-size: 1.2rem; color: var(--accent); }
+.card-bio { color: var(--muted); font-size: 0.9rem; }
+.card-sub { color: var(--muted); font-size: 0.85rem; }
+.card-text { margin: 0; line-height: 1.5; }
+
+.card-tag {
+  display: inline-block;
+  background: var(--panel-2);
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  padding: 1px 10px;
+  font-size: 0.78rem;
+}
+
+/* --- Миниатюра-иллюстрация карточки --- */
+.card-art {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  background: var(--panel-2);
+}
+.art-svg { width: 100%; height: auto; display: block; }
+
+.card-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 35%, rgba(255, 255, 255, 0.25) 50%, transparent 65%);
+  transform: translateX(-120%);
+  transition: transform 0.7s ease;
+  pointer-events: none;
+}
+.card:hover .card-art::after { transform: translateX(120%); }
+.card:hover .card-art { box-shadow: 0 0 0 2px var(--accent); }
+
+/* ===================== Skeleton loading ===================== */
+.skeleton { pointer-events: none; user-select: none; }
+
+.sk {
+  background: var(--panel-2);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+.sk-rule { height: 4px; }
+.sk-art { height: 180px; width: 100%; border-radius: 10px; }
+.sk-line { height: 14px; margin-top: 2px; }
+
+.shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 35%, rgba(255, 255, 255, 0.16) 50%, transparent 65%);
+  transform: translateX(-120%);
+  animation: shimmer 1.4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmer { to { transform: translateX(120%); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton .shimmer::after { animation: none; transform: none; }
+}

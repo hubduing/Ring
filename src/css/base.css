@@ -1,0 +1,118 @@
+/* ===================== Токены (тёмная тема по умолчанию) ===================== */
+:root {
+  --bg: #0c0a12;
+  --panel: #161220;
+  --panel-2: #1d1728;
+  --ink: #e8e3d8;
+  --muted: #9b948a;
+  --line: #2a2436;
+  --gold: #c9a961;
+  --gold-soft: #e0c68c;
+  --ink-on-gold: #221a10;
+  --accent: var(--gold);
+  --accent-soft: var(--gold-soft);
+
+  --font-head: Georgia, 'Palatino Linotype', 'Times New Roman', serif;
+  --font-body: 'Segoe UI', 'Trebuchet MS', system-ui, sans-serif;
+
+  --radius: 12px;
+  --shadow: 0 12px 34px rgba(0, 0, 0, 0.5);
+  --focus: 0 0 0 3px rgba(201, 169, 97, 0.45);
+}
+
+:root[data-theme="light"] {
+  --bg: #f4efe6;
+  --panel: #fbf8f1;
+  --panel-2: #f1e9da;
+  --ink: #2a2622;
+  --muted: #6f675c;
+  --line: #d9cfbd;
+  --gold: #8a6d2f;
+  --gold-soft: #a8863f;
+  --shadow: 0 12px 34px rgba(90, 70, 40, 0.18);
+}
+
+/* ===================== Сброс и база ===================== */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.55;
+}
+
+a { color: var(--link, var(--gold)); }
+a:focus-visible { outline: none; box-shadow: var(--focus); }
+
+img { max-width: 100%; display: block; }
+
+/* ===================== Шапка ===================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: linear-gradient(180deg, var(--panel) 0%, var(--bg) 100%);
+  border-bottom: 1px solid var(--line);
+  padding: 0 24px;
+}
+
+.header-inner { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+
+.brand {
+  font-family: var(--font-head);
+  font-size: 1.25rem;
+  letter-spacing: 0.04em;
+  color: var(--gold);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.brand::before { content: "✦ "; }
+
+.nav { display: flex; gap: 14px; flex-wrap: wrap; }
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+.nav a:hover { color: var(--ink); background: var(--panel-2); }
+.nav a[aria-current="page"] {
+  color: var(--gold);
+  box-shadow: inset 0 -2px 0 var(--gold);
+}
+
+.theme-toggle {
+  border: 1px solid var(--line);
+  background: var(--panel-2);
+  color: var(--gold);
+  border-radius: 8px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* ===================== Подвал ===================== */
+.site-footer {
+  margin-top: auto;
+  padding: 22px 24px;
+  text-align: center;
+  border-top: 1px solid var(--line);
+}
+.foot-quote {
+  font-family: var(--font-head);
+  font-style: italic;
+  color: var(--gold);
+  margin-top: 6px;
+}
+
+/* ===================== Типографика ===================== */
+h1, h2, h3 { font-family: var(--font-head); }
+.page-hero h1 { font-size: clamp(1.8rem, 4vw, 3rem); margin: 0; }
+.page-lead { color: var(--muted); font-size: 1.05rem; max-width: 60ch; }

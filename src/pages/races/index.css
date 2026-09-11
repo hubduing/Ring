@@ -1,0 +1,9 @@
+/* Страница «Расы»: зелёный акцент */
+.page-hero { border-left: 4px solid var(--green); padding-left: 14px; }
+:root { --green: #3f5d3f; }
+
+.card-sub::before { content: "· "; color: var(--green); }
+
+@media (max-width: 640px) {
+  .page-hero { border-left: none; padding-left: 0; }
+}
